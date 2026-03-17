@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priya Soni — Software Consultant</title>
+  <!-- service-category: P0802, P0806 -->
+  <meta name="category" content="P0802 P0806" />
+  <meta name="description" content="Software Consultant specialising in custom software development and IT consulting for international clients." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#6366f1',
+            'brand-light': '#818cf8',
+            surface: '#0f172a',
+            card: '#1e293b',
+            border: '#334155',
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: ['"Inter"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    body { background-color: #0f172a; }
+    .gradient-text {
+      background: linear-gradient(135deg, #6366f1, #a78bfa, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 0 1px #6366f1, 0 20px 40px rgba(99,102,241,0.15);
+    }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #6366f1;
+      transition: width 0.2s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .glow { box-shadow: 0 0 60px rgba(99,102,241,0.2); }
+  </style>
+</head>
+<body class="dark text-slate-300 font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-border">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-mono text-brand-light font-medium tracking-tight">priya<span class="text-slate-500">.</span>soni</span>
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate-400">
+        <a href="#services" class="nav-link hover:text-white transition-colors">Services</a>
+        <a href="#work" class="nav-link hover:text-white transition-colors">Work</a>
+        <a href="#about" class="nav-link hover:text-white transition-colors">About</a>
+        <a href="#contact" class="bg-brand hover:bg-brand-light text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-1.5 text-xs text-slate-400 font-mono mb-8">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        Available for new projects
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+        Hi, I'm Priya Soni.<br />
+        <span class="gradient-text">I build software that ships.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Results-driven Software Consultant delivering high-performance digital solutions for international clients.
+        From architecture to deployment — production-ready, every time.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#work" class="bg-brand hover:bg-brand-light text-white px-8 py-3.5 rounded-lg font-medium transition-colors">
+          View Case Studies
+        </a>
+        <a href="#services" class="border border-border hover:border-brand text-slate-300 hover:text-white px-8 py-3.5 rounded-lg font-medium transition-colors">
+          Explore Services
+        </a>
+      </div>
+      <div class="mt-16 flex flex-wrap justify-center gap-3">
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">React</span>
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">Node.js</span>
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">TypeScript</span>
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">Go</span>
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">PostgreSQL</span>
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">Redis</span>
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">AWS</span>
+        <span class="tag bg-card border border-border text-slate-500 px-3 py-1 rounded-full">GraphQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <p class="font-mono text-brand text-sm mb-3">// what I do</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Services</h2>
+        <p class="text-slate-400 mt-3 max-w-xl">End-to-end technical execution across two core disciplines.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Service Block 1: P0802 -->
+        <div class="bg-card border border-border rounded-2xl p-8 card-hover">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-brand/10 border border-brand/20 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Custom Software Development & Implementation</h3>
+          <p class="text-slate-500 text-sm font-mono mb-6">Software Development · Implementation</p>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <span class="text-brand mt-0.5">▸</span>
+              <div>
+                <p class="text-slate-200 font-medium text-sm">End-to-End Web Applications</p>
+                <p class="text-slate-500 text-sm mt-0.5">Designing and deploying scalable full-stack applications using modern frameworks like React and Node.js.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand mt-0.5">▸</span>
+              <div>
+                <p class="text-slate-200 font-medium text-sm">API Integration & Architecture</p>
+                <p class="text-slate-500 text-sm mt-0.5">Building robust RESTful and GraphQL APIs to connect disparate business systems and automate workflows.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand mt-0.5">▸</span>
+              <div>
+                <p class="text-slate-200 font-medium text-sm">System Modernization</p>
+                <p class="text-slate-500 text-sm mt-0.5">Migrating legacy codebases to cloud-native architectures to improve performance and security.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service Block 2: P0806 -->
+        <div class="bg-card border border-border rounded-2xl p-8 card-hover">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">IT Consulting & Information Services</h3>
+          <p class="text-slate-500 text-sm font-mono mb-6">Technical Consultancy · Advisory</p>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <span class="text-violet-400 mt-0.5">▸</span>
+              <div>
+                <p class="text-slate-200 font-medium text-sm">Technical Strategy</p>
+                <p class="text-slate-500 text-sm mt-0.5">Architectural guidance and technology stack recommendations for early-stage startups.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-violet-400 mt-0.5">▸</span>
+              <div>
+                <p class="text-slate-200 font-medium text-sm">Data Management & Analytics</p>
+                <p class="text-slate-500 text-sm mt-0.5">Designing database schemas and data processing pipelines to turn raw data into actionable business insights.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-violet-400 mt-0.5">▸</span>
+              <div>
+                <p class="text-slate-200 font-medium text-sm">Performance Optimization</p>
+                <p class="text-slate-500 text-sm mt-0.5">Auditing existing software infrastructure to reduce latency and operational costs.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="work" class="py-28 px-6 bg-card/30">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16">
+        <p class="font-mono text-brand text-sm mb-3">// proof of work</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Case Studies</h2>
+        <p class="text-slate-400 mt-3 max-w-xl">Selected projects. Details anonymized where required by NDA.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- PlusBioEnergy -->
+        <div class="bg-card border border-border rounded-2xl p-8 card-hover flex flex-col">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="tag bg-green-500/10 text-green-400 border border-green-500/20 px-2.5 py-1 rounded-full">CleanTech · Global</span>
+            <span class="tag bg-slate-700 text-slate-400 border border-slate-600 px-2.5 py-1 rounded-full">Live</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-1">PlusBioEnergy</h3>
+          <p class="text-slate-400 text-sm mb-6">Web Platform · Advisory &amp; Biogas Solutions</p>
+
+          <div class="space-y-5 flex-1">
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">About</p>
+              <p class="text-slate-300 text-sm leading-relaxed">A Denmark-founded cleantech venture delivering next-practice biogas solutions and advisory services for rural areas globally, working alongside organisations like Novonesis.</p>
+            </div>
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">Contribution</p>
+              <p class="text-slate-300 text-sm leading-relaxed">Designed and implemented the web platform supporting their digital presence, knowledge delivery, and stakeholder engagement workflows.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-border flex items-center justify-between">
+            <div class="flex flex-wrap gap-2">
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Web Dev</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">CMS</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">UI/UX</span>
+            </div>
+            <a href="https://plusbioenergy.com/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-brand hover:text-brand-light text-xs font-mono transition-colors flex-shrink-0 ml-4">
+              Visit site
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- SanderMap -->
+        <div class="bg-card border border-border rounded-2xl p-8 card-hover flex flex-col">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="tag bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2.5 py-1 rounded-full">Knowledge · SaaS</span>
+            <span class="tag bg-slate-700 text-slate-400 border border-slate-600 px-2.5 py-1 rounded-full">Live</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-1">SanderMap</h3>
+          <p class="text-slate-400 text-sm mb-6">Cloud Platform · Franchising &amp; Competency Intelligence</p>
+
+          <div class="space-y-5 flex-1">
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">About</p>
+              <p class="text-slate-300 text-sm leading-relaxed">A cloud platform delivering franchising knowledge, compliance guidance, and competency development tools to organisations navigating a rapidly shifting global landscape.</p>
+            </div>
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">Contribution</p>
+              <p class="text-slate-300 text-sm leading-relaxed">Built core platform features including competency mapping workflows, content delivery architecture, and the client-facing dashboard.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-border flex items-center justify-between">
+            <div class="flex flex-wrap gap-2">
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Node.js</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Cloud</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">SaaS</span>
+            </div>
+            <a href="https://sandermap.com/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1.5 text-brand hover:text-brand-light text-xs font-mono transition-colors flex-shrink-0 ml-4">
+              Visit site
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Last Mile Delivery -->
+        <div class="bg-card border border-border rounded-2xl p-8 card-hover flex flex-col">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="tag bg-sky-500/10 text-sky-400 border border-sky-500/20 px-2.5 py-1 rounded-full">Logistics · US</span>
+            <span class="tag bg-slate-800 text-slate-500 border border-slate-700 px-2.5 py-1 rounded-full">NDA</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-1">Last Mile Delivery Platform</h3>
+          <p class="text-slate-400 text-sm mb-6">Real-time Fleet Analytics Dashboard</p>
+
+          <div class="space-y-5 flex-1">
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">The Problem</p>
+              <p class="text-slate-300 text-sm leading-relaxed">A US-based logistics client needed to track fleet movements in real-time but suffered from 30-second data lags, causing operational blind spots.</p>
+            </div>
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">The Solution</p>
+              <p class="text-slate-300 text-sm leading-relaxed">Implemented a WebSocket-based notification system and optimised PostgreSQL queries, reducing data lag to under 2 seconds.</p>
+            </div>
+            <div class="bg-surface rounded-xl p-4 border border-border">
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-3">Result</p>
+              <div class="flex items-baseline gap-2">
+                <span class="text-3xl font-bold text-white">~93%</span>
+                <span class="text-slate-400 text-sm">reduction in data latency</span>
+              </div>
+              <p class="text-slate-500 text-xs mt-1">30s → &lt;2s</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-border">
+            <p class="text-xs font-mono text-slate-500 mb-3">Tech Stack</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">React</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Go</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Redis</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">PostgreSQL</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subscription Billing Engine -->
+        <div class="bg-card border border-border rounded-2xl p-8 card-hover flex flex-col">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="tag bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full">SaaS · EU</span>
+            <span class="tag bg-slate-800 text-slate-500 border border-slate-700 px-2.5 py-1 rounded-full">NDA</span>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-1">Subscription Billing Engine</h3>
+          <p class="text-slate-400 text-sm mb-6">Automated Quote-to-Cash Lifecycle</p>
+
+          <div class="space-y-5 flex-1">
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">The Problem</p>
+              <p class="text-slate-300 text-sm leading-relaxed">An EU SaaS startup was manually invoicing clients, leading to high error rates and delayed payments that impacted cash flow.</p>
+            </div>
+            <div>
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-1.5">The Solution</p>
+              <p class="text-slate-300 text-sm leading-relaxed">Built a custom integration with Stripe and Xero to automate the entire Quote-to-Cash lifecycle, eliminating manual touchpoints.</p>
+            </div>
+            <div class="bg-surface rounded-xl p-4 border border-border">
+              <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-3">Result</p>
+              <div class="flex items-baseline gap-2">
+                <span class="text-3xl font-bold text-white">100%</span>
+                <span class="text-slate-400 text-sm">billing automation</span>
+              </div>
+              <p class="text-slate-500 text-xs mt-1">Zero manual invoicing errors</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-border">
+            <p class="text-xs font-mono text-slate-500 mb-3">Tech Stack</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Node.js</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">TypeScript</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Stripe</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Xero</span>
+              <span class="tag bg-surface border border-border text-slate-400 px-2.5 py-1 rounded-full">Serverless</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="font-mono text-brand text-sm mb-3">// about</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">The person behind the code.</h2>
+          <p class="text-slate-400 leading-relaxed mb-6">
+            I'm Priya Soni — a results-driven Software Consultant with experience delivering high-performance digital solutions for international clients.
+            I specialise in custom software development and IT consulting, helping businesses bridge the gap between complex technical requirements and scalable, production-ready code.
+          </p>
+          <p class="text-slate-400 leading-relaxed">
+            Whether you're a startup needing a technical co-pilot or an established company looking to modernize your stack,
+            I bring the architecture thinking and hands-on execution to get it done.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-card border border-border rounded-xl p-5 flex items-center gap-4">
+            <div class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm">International Clients</p>
+              <p class="text-slate-500 text-xs">US, EU, and global remote engagements</p>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-xl p-5 flex items-center gap-4">
+            <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm">Production-Ready Delivery</p>
+              <p class="text-slate-500 text-xs">Shipped, tested, and documented</p>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-xl p-5 flex items-center gap-4">
+            <div class="w-10 h-10 bg-violet-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm">Full-Stack Execution</p>
+              <p class="text-slate-500 text-xs">From architecture to deployment</p>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-xl p-5 flex items-center gap-4">
+            <div class="w-10 h-10 bg-sky-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm">Registered Consultant</p>
+              <p class="text-slate-500 text-xs">Software development & technical consulting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-28 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="bg-card border border-border rounded-3xl p-12 glow">
+        <p class="font-mono text-brand text-sm mb-4">// let's build something</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to start a project?</h2>
+        <p class="text-slate-400 mb-8 leading-relaxed">
+          Whether you need a full build, a technical audit, or strategic guidance — let's talk scope, timeline, and outcomes.
+        </p>
+        <a href="#" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white px-8 py-4 rounded-xl font-medium transition-colors text-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+          Let's Talk
+        </a>
+        <div class="mt-8 pt-8 border-t border-border flex justify-center gap-6">
+          <a href="https://github.com/sonipriya95" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-white transition-colors text-sm font-mono">GitHub</a>
+          <a href="https://www.linkedin.com/in/priya-soni-21876817b/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-white transition-colors text-sm font-mono">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-border py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <span class="font-mono">Priya Soni</span>
+      <span>Software Development · IT Consulting</span>
+      <span>&copy; 2026 Priya Soni. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
